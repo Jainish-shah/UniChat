@@ -119,7 +119,6 @@ class _signup_pageState extends State<signup_page> {
                 ),
               ),
             )
-
           ],
         ),
       ),

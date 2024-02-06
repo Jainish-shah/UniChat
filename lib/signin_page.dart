@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:unichat/signup_page.dart';
 
+import 'forgot_page.dart';
+
 class signin_page extends StatefulWidget {
   const signin_page({super.key});
 
@@ -95,8 +97,23 @@ class _signin_pageState extends State<signin_page> {
               ),
               ),
             ),
-            )
-
+            ),
+            // Add the Forgot Password link here
+            Padding(padding: const EdgeInsets.only(top: 8.0),
+              child: InkWell(
+                onTap: () {
+                  // Navigate to Forgot Password Page
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => forgot_page()));
+                },
+                child: const Text(
+                  'Forgot Password...',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.blue, // Adjust the color as needed
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
